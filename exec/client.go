@@ -26,7 +26,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/chaosblade-io/chaosblade-spec-go/spec"
+	"github.com/lomoonmoonbird/chaosblade-spec-go/spec"
 	"github.com/docker/docker/pkg/stdcopy"
 
 	"github.com/docker/docker/api/types"

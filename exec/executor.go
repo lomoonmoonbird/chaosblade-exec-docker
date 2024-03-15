@@ -21,8 +21,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/chaosblade-io/chaosblade-spec-go/spec"
-	"github.com/chaosblade-io/chaosblade-spec-go/util"
+	"github.com/lomoonmoonbird/chaosblade-spec-go/spec"
+	"github.com/lomoonmoonbird/chaosblade-spec-go/util"
 	"github.com/docker/docker/api/types"
 )
 
@@ -43,7 +43,7 @@ var commonFunc = func(uid string, ctx context.Context, model *spec.ExpModel) str
 		return GetAllDockerFlagNames()
 	})
 	if _, ok := spec.IsDestroy(ctx); ok {
-		// UPDATE: https://github.com/chaosblade-io/chaosblade/issues/334
+		// UPDATE: https://github.com/lomoonmoonbird/chaosblade/issues/334
 		return fmt.Sprintf("%s destroy %s %s %s", BladeBin, model.Target, model.ActionName, matchers)
 	}
 	return fmt.Sprintf("%s create %s %s %s --uid %s", BladeBin, model.Target, model.ActionName, matchers, uid)
